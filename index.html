@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+   <meta name="author" content="Ewa Kulicka">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>GREMIT Artur Dewerenda</title>
+  <meta name="description" content="Zakładanie trawników, systemy nawadniania i koszenie. Profesjonalna pielęgnacja ogrodów." />
+
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon/site.webmanifest">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- SDK -->
+  <script src="/_sdk/element_sdk.js" defer></script>
+  <script src="/_sdk/data_sdk.js" defer></script>
+</head>
+
+<body>
+<div id="app-wrapper">
+
+  <!-- NAV -->
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="brand">
+        <div class="brand-icon">🌱</div>
+        <span id="nav-company-name" class="brand-name">GREMIT Artur Dewerenda</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#uslugi">Usługi</a></li>
+        <li><a href="#dlaczego-my">Dlaczego my</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Zmień motyw">🌓</button>
+        <a href="#kontakt" class="btn primary">Bezpłatna wycena</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero grass-pattern">
+      <div class="container hero-grid">
+        <div class="hero-text animate-fade-in">
+          <span class="badge">🌱 Profesjonalna pielęgnacja ogrodów</span>
+          <h1 id="hero-title">Twój wymarzony trawnik zaczyna się tutaj</h1>
+          <p id="hero-subtitle">
+            Zakładanie trawników, systemy nawadniania i profesjonalne koszenie.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#kontakt" class="btn primary">Zamów wycenę</a>
+            <a href="#uslugi" class="btn outline">Zobacz usługi</a>
+          </div>
+        </div>
+
+        <div class="hero-illustration animate-fade-in delay-1">
+          <!-- SVG -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span id="footer-company-name">GREMIT Artur Dewerenda</span>
+      <span>© 2026 Wszystkie prawa zastrzeżone</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
