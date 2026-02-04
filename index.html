@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!-- STYLES -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
 
   <!-- SDK -->
@@ -28,63 +29,246 @@
 </head>
 
 <body>
-<div id="app-wrapper">
-
-  <!-- NAV -->
-  <header class="site-header">
-    <nav class="nav container">
-      <div class="brand">
-        <div class="brand-icon">🌱</div>
-        <span id="nav-company-name" class="brand-name">GREMIT Artur Dewerenda</span>
-      </div>
-
-      <ul class="nav-links">
-        <li><a href="#uslugi">Usługi</a></li>
-        <li><a href="#dlaczego-my">Dlaczego my</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <button id="theme-toggle" aria-label="Zmień motyw">🌓</button>
-        <a href="#kontakt" class="btn primary">Bezpłatna wycena</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <main>
-    <section class="hero grass-pattern">
-      <div class="container hero-grid">
-        <div class="hero-text animate-fade-in">
-          <span class="badge">🌱 Profesjonalna pielęgnacja ogrodów</span>
-          <h1 id="hero-title">Twój wymarzony trawnik zaczyna się tutaj</h1>
-          <p id="hero-subtitle">
-            Zakładanie trawników, systemy nawadniania i profesjonalne koszenie.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#kontakt" class="btn primary">Zamów wycenę</a>
-            <a href="#uslugi" class="btn outline">Zobacz usługi</a>
-          </div>
-        </div>
-
-        <div class="hero-illustration animate-fade-in delay-1">
-          <!-- SVG -->
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span id="footer-company-name">GREMIT Artur Dewerenda</span>
-      <span>© 2026 Wszystkie prawa zastrzeżone</span>
+<body class="h-full font-body">
+  <div id="app-wrapper" class="w-full h-full overflow-auto hero-wrapper">
+  <!-- NAVIGATION -->
+   <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+     <div class="flex items-center gap-3">
+      <!-- todo - change into logo -->
+      <div class="w-10 h-10 rounded-full flex items-center justify-center nav-logo-bg">
+       <svg class="w-6 h-6" fill="white" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.85 0 3.58-.5 5.07-1.37-.89-1.11-2.07-2.47-2.07-4.63 0-3 2-4 2-6s-1-3-3-3c-1.5 0-2.5 1-3 2-.5-1-1.5-2-3-2-2 0-3 1-3 3s2 3 2 6c0 2.16-1.18 3.52-2.07 4.63C4.42 19.5 6.15 20 8 20c5.52 0 10-4.48 10-10S17.52 2 12 2z" /> <path d="M12 6c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1V7c0-.55-.45-1-1-1z" />
+       </svg>
+      </div><span id="nav-company-name" class="font-heading text-xl font-bold nav-logo-text">GREMIT Artur Dewerenda</span>
+     </div>
+     <div class="hidden md:flex gap-8"><a href="#uslugi" class="nav-link">Usługi</a> <a href="#dlaczego-my" class="nav-link">Dlaczego my</a> <a href="#kontakt" class="nav-link">Kontakt</a>
+     </div><a href="#kontakt" class="nav-btn"> Bezpłatna wycena </a>
     </div>
-  </footer>
-
-</div>
-
-<script src="app.js"></script>
+   </nav>
+   <!-- HERO -->
+   <section class="relative min-h-screen flex items-center grass-pattern pt-20">
+    <div class="absolute inset-0 overflow-hidden">
+     <div class="absolute -top-20 -right-20 w-96 h-96 rounded-full opacity-20" style="background-color: #16a34a; filter: blur(80px);"></div>
+     <div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full opacity-15" style="background-color: #16a34a; filter: blur(60px);"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center relative z-10">
+     <div class="animate-fade-in"><span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6" style="background-color: rgba(22, 163, 74, 0.1); color: #16a34a;"> 🌱 Profesjonalna pielęgnacja ogrodów </span>
+      <h1 id="hero-title" class="font-heading text-5xl md:text-6xl font-bold leading-tight mb-6" style="color: #1e293b;">Twój wymarzony trawnik zaczyna się tutaj</h1>
+      <p id="hero-subtitle" class="text-xl mb-8 leading-relaxed" style="color: #64748b;">Zakładanie trawników, systemy nawadniania i profesjonalne koszenie. Zadbamy o Twój ogród jak o własny.</p>
+      <div class="flex flex-wrap gap-4"><a href="#kontakt" class="px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl hover:scale-105" style="background-color: #16a34a; color: white;"> Zamów bezpłatną wycenę </a> <a href="#uslugi" class="px-8 py-4 rounded-full font-semibold text-lg border-2 transition-all hover:shadow-lg" style="border-color: #16a34a; color: #16a34a;"> Zobacz usługi </a>
+      </div>
+     </div>
+     <div class="relative animate-fade-in animate-delay-1">
+      <div class="relative w-full aspect-square max-w-md mx-auto"><!-- Decorative circles -->
+       <div class="absolute inset-0 rounded-full animate-float" style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); opacity: 0.1;"></div>
+       <div class="absolute inset-8 rounded-full" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);"></div><!-- Main illustration -->
+       <div class="absolute inset-0 flex items-center justify-center">
+        <svg class="w-3/4 h-3/4" viewbox="0 0 200 200" fill="none"><!-- Ground --> <ellipse cx="100" cy="160" rx="80" ry="20" fill="#16a34a" opacity="0.2" /> <!-- Grass blades --> <path d="M60 160 Q62 120 55 80" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" /> <path d="M70 160 Q75 110 68 70" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round" /> <path d="M85 160 Q82 100 90 60" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" /> <path d="M100 160 Q100 90 100 50" stroke="#15803d" stroke-width="5" fill="none" stroke-linecap="round" /> <path d="M115 160 Q118 100 110 60" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" /> <path d="M130 160 Q125 110 132 70" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round" /> <path d="M140 160 Q138 120 145 80" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" /> <!-- Water drops --> <circle cx="75" cy="45" r="4" fill="#3b82f6" opacity="0.8" /> <circle cx="120" cy="55" r="3" fill="#3b82f6" opacity="0.6" /> <circle cx="95" cy="40" r="2.5" fill="#60a5fa" opacity="0.7" /> <!-- Sun --> <circle cx="160" cy="40" r="20" fill="#fbbf24" opacity="0.3" /> <circle cx="160" cy="40" r="12" fill="#f59e0b" />
+        </svg>
+       </div>
+      </div>
+     </div>
+    </div><!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce scroll-indicator">
+     <svg class="w-6 h-6" fill="none" stroke="#16a34a" stroke-width="2" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+     </svg>
+    </div>
+   </section><!-- Services Section -->
+   <section id="uslugi" class="py-24" style="background-color: #f8fafc;">
+    <div class="max-w-6xl mx-auto px-6">
+     <div class="text-center mb-16 animate-fade-in"><span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background-color: rgba(22, 163, 74, 0.1); color: #16a34a;"> Nasze usługi </span>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold mb-4" style="color: #1e293b;">Co możemy dla Ciebie zrobić?</h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: #64748b;">Kompleksowa obsługa Twojego ogrodu od A do Z</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8"><!-- Service 1 -->
+      <div class="service-card rounded-3xl p-8 shadow-lg animate-fade-in animate-delay-1" style="background-color: #ffffff;">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style="background-color: rgba(22, 163, 74, 0.1);">
+        <svg class="w-8 h-8" fill="#16a34a" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+        </svg>
+       </div>
+       <h3 id="service1-title" class="font-heading text-2xl font-bold mb-3" style="color: #1e293b;">Zakładanie trawników</h3>
+       <p class="mb-6" style="color: #64748b;">Profesjonalne zakładanie trawników z siewu lub rolki. Przygotowanie podłoża, dobór odpowiednich nasion i pielęgnacja.</p>
+       <ul class="space-y-2">
+        <li class="flex items-center gap-2" style="color: #475569;">
+         <svg class="w-5 h-5 flex-shrink-0" fill="#16a34a" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Trawnik z siewu</li>
+        <li class="flex items-center gap-2" style="color: #475569;">
+         <svg class="w-5 h-5 flex-shrink-0" fill="#16a34a" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Trawnik z rolki</li>
+        <li class="flex items-center gap-2" style="color: #475569;">
+         <svg class="w-5 h-5 flex-shrink-0" fill="#16a34a" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Renowacja trawnika</li>
+       </ul>
+      </div><!-- Service 2 -->
+      <div class="service-card rounded-3xl p-8 shadow-lg animate-fade-in animate-delay-2" style="background-color: #ffffff;">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style="background-color: rgba(59, 130, 246, 0.1);">
+        <svg class="w-8 h-8" fill="#3b82f6" viewbox="0 0 24 24"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z" /> <path d="M12 17.2c-1.65 0-3-1.31-3-2.93 0-.95.58-2.03 1.75-3.27l1.25 1.12c-.73.8-1 1.4-1 1.65 0 .55.45 1 1 1s1-.45 1-1h2c0 1.62-1.35 2.93-3 2.93z" />
+        </svg>
+       </div>
+       <h3 id="service2-title" class="font-heading text-2xl font-bold mb-3" style="color: #1e293b;">Systemy nawadniania</h3>
+       <p class="mb-6" style="color: #64748b;">Projektowanie i montaż automatycznych systemów nawadniania. Oszczędność wody i czasu przy pięknym trawniku.</p>
+       <ul class="space-y-2">
+        <li class="flex items-center gap-2" style="color: #475569;">
+         <svg class="w-5 h-5 flex-shrink-0" fill="#16a34a" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Nawadnianie kropelkowe</li>
+        <li class="flex items-center gap-2" style="color: #475569;">
+         <svg class="w-5 h-5 flex-shrink-0" fill="#16a34a" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Zraszacze automatyczne</li>
+        <li class="flex items-center gap-2" style="color: #475569;">
+         <svg class="w-5 h-5 flex-shrink-0" fill="#16a34a" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Sterowanie inteligentne</li>
+       </ul>
+      </div><!-- Service 3 -->
+      <div class="service-card rounded-3xl p-8 shadow-lg animate-fade-in animate-delay-3" style="background-color: #ffffff;">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style="background-color: rgba(245, 158, 11, 0.1);">
+        <svg class="w-8 h-8" fill="#f59e0b" viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z" /> <path d="M7 12h2v5H7zm4-3h2v8h-2zm4-3h2v11h-2z" />
+        </svg>
+       </div>
+       <h3 id="service3-title" class="font-heading text-2xl font-bold mb-3" style="color: #1e293b;">Koszenie i pielęgnacja</h3>
+       <p class="mb-6" style="color: #64748b;">Regularne koszenie, nawożenie, aeracja i wertykulacja. Kompleksowa opieka nad Twoim trawnikiem przez ca��y sezon.</p>
+       <ul class="space-y-2">
+        <li class="flex items-center gap-2" style="color: #475569;">
+         <svg class="w-5 h-5 flex-shrink-0" fill="#16a34a" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Koszenie cykliczne</li>
+        <li class="flex items-center gap-2" style="color: #475569;">
+         <svg class="w-5 h-5 flex-shrink-0" fill="#16a34a" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Nawożenie sezonowe</li>
+        <li class="flex items-center gap-2" style="color: #475569;">
+         <svg class="w-5 h-5 flex-shrink-0" fill="#16a34a" viewbox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Aeracja i wertykulacja</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section><!-- Why Us Section -->
+   <section id="dlaczego-my" class="py-24" style="background-color: #ffffff;">
+    <div class="max-w-6xl mx-auto px-6">
+     <div class="text-center mb-16"><span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background-color: rgba(22, 163, 74, 0.1); color: #16a34a;"> Dlaczego my? </span>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6" style="color: #1e293b;">Co nas wyróżnia?</h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: #64748b;">Jesteśmy zespołem pasjonatów zieleni. Każdy projekt traktujemy indywidualnie, dbając o najdrobniejsze szczegóły.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+      <div class="space-y-4">
+       <div class="rounded-2xl p-8 h-48 flex flex-col justify-end transition-transform hover:scale-105" style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);">
+        <div class="text-white text-3xl mb-2">
+         🌱
+        </div>
+        <h3 class="text-white font-heading font-bold text-2xl mb-2">Gwarancja jakości</h3>
+        <p class="text-white opacity-90">Każda usługa objęta jest pełną gwarancją</p>
+       </div>
+       <div class="rounded-2xl p-8 h-56 flex flex-col justify-end transition-transform hover:scale-105" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);">
+        <div class="text-white text-3xl mb-2">
+         🚜
+        </div>
+        <h3 class="text-white font-heading font-bold text-2xl mb-2">Nowoczesny sprzęt</h3>
+        <p class="text-white opacity-90">Używamy najnowocześniejszych narzędzi i technologii</p>
+       </div>
+      </div>
+      <div class="space-y-4 md:pt-8">
+       <div class="rounded-2xl p-8 h-56 flex flex-col justify-end transition-transform hover:scale-105" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+        <div class="text-white text-3xl mb-2">
+         💰
+        </div>
+        <h3 class="text-white font-heading font-bold text-2xl mb-2">Konkurencyjne ceny</h3>
+        <p class="text-white opacity-90">Najlepsza jakość w atrakcyjnych cenach</p>
+       </div>
+       <div class="rounded-2xl p-8 h-48 flex flex-col justify-end transition-transform hover:scale-105" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+        <div class="text-white text-3xl mb-2">
+         ⏰
+        </div>
+        <h3 class="text-white font-heading font-bold text-2xl mb-2">Terminowość</h3>
+        <p class="text-white opacity-90">Dotrzymujemy ustalonych terminów realizacji</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="kontakt" class="py-24" style="background: linear-gradient(135deg, #15803d 0%, #16a34a 50%, #22c55e 100%);">
+    <div class="max-w-4xl mx-auto px-6">
+     <div class="text-center mb-16">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold mb-4 text-white">Skontaktuj się z nami</h2>
+      <p class="text-xl text-white opacity-90">Chętnie odpowiemy na wszystkie pytania</p>
+     </div>
+     <div class="rounded-3xl p-12" style="background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);">
+      <div class="grid md:grid-cols-3 gap-8">
+       <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(22, 163, 74, 0.1);">
+         <svg class="w-8 h-8" fill="#16a34a" viewbox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+         </svg>
+        </div>
+        <div class="text-sm font-semibold mb-2" style="color: #64748b;">
+         Telefon
+        </div>
+        <div id="contact-phone" class="font-heading text-xl font-bold" style="color: #1e293b;">
+         +48 123 456 789
+        </div>
+       </div>
+       <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(22, 163, 74, 0.1);">
+         <svg class="w-8 h-8" fill="#16a34a" viewbox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+         </svg>
+        </div>
+        <div class="text-sm font-semibold mb-2" style="color: #64748b;">
+         Email
+        </div>
+        <div id="contact-email" class="font-heading text-xl font-bold break-all" style="color: #1e293b;">
+         adres @ mailowy
+        </div>
+       </div>
+       <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: rgba(22, 163, 74, 0.1);">
+         <svg class="w-8 h-8" fill="#16a34a" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+         </svg>
+        </div>
+        <div class="text-sm font-semibold mb-2" style="color: #64748b;">
+         Adres
+        </div>
+        <div class="font-heading text-xl font-bold" style="color: #1e293b;">
+         Oleśnica Mała 76B<br>
+         55-200 Oława
+        </div>
+       </div>
+      </div>
+      <div class="mt-12 pt-8 border-t text-center" style="border-color: #e2e8f0;">
+       <div class="text-sm font-semibold mb-3" style="color: #64748b;">
+        Godziny pracy
+       </div>
+       <div class="font-medium" style="color: #475569;">
+        Poniedziałek - Piątek: 8:00 - 18:00
+       </div>
+       <div class="font-medium" style="color: #475569;">
+        Sobota: 9:00 - 14:00
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="py-8" style="background-color: #1e293b;">
+    <div class="max-w-6xl mx-auto px-6">
+     <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+       <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #16a34a;">
+        <svg class="w-5 h-5" fill="white" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.85 0 3.58-.5 5.07-1.37-.89-1.11-2.07-2.47-2.07-4.63 0-3 2-4 2-6s-1-3-3-3c-1.5 0-2.5 1-3 2-.5-1-1.5-2-3-2-2 0-3 1-3 3s2 3 2 6c0 2.16-1.18 3.52-2.07 4.63C4.42 19.5 6.15 20 8 20c5.52 0 10-4.48 10-10S17.52 2 12 2z" />
+        </svg>
+       </div><span id="footer-company-name" class="font-heading font-bold text-white">GREMIT Artur Dewerenda</span>
+      </div>
+      <div class="text-sm" style="color: #94a3b8;">
+       © 2026 GREMIT Artur Dewerenda. Wszystkie prawa zastrzeżone.
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c8cf55e85393666',t:'MTc3MDIzNzM2OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script src="app.js"></script>
 </body>
 </html>
