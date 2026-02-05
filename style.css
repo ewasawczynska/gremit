@@ -16,9 +16,7 @@ body {
 .font-heading {
   font-family: 'Playfair Display', serif;
 }
-.font-body {
-  font-family: 'Source Sans 3', sans-serif;
-}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -66,14 +64,13 @@ nav {
 .nav-link:hover {
   opacity: 0.8;
 }
-.nav-logo-bg {
-  background-color: #16a34a;
+.nav-logo {
+  width: 172px;
+  height: 70px,
 }
-.nav-logo-text {
-  color: #1e293b;
-}
+
 .nav-btn {
-  background-color: #16a34a;
+  background-color: #277a25;
   color: white;
   padding: 0.625rem 1.25rem;
   border-radius: 9999px;
