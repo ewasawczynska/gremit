@@ -257,6 +257,9 @@ footer {
 .footer-icon {
   fill: white;
 }
+.footer-name {
+  color: #e9ecf1;
+}
 .footer-text {
   color: white;
 }
